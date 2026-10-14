@@ -62,6 +62,8 @@ if (GIT_FOUND AND EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/patches/0001-fix-arm64-2b-
     endif()
 endif()
 
+set(LLAMA_BUILD_COMMON ON CACHE BOOL "Build llama.cpp common library" FORCE)
+set(LLAMA_BUILD_TOOLS  ON CACHE BOOL "Build llama.cpp tools" FORCE)
 set(LLAMA_BUILD_SERVER ON CACHE BOOL "Build llama.cpp server" FORCE)
 add_subdirectory(3rdparty/llama.cpp)
 
